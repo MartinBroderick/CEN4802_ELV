@@ -1,0 +1,169 @@
+﻿<Window x:Class="WorldView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldView"
+        mc:Ignorable="d"
+        Title="Elevator Control GUI" Height="450" Width="1000">
+    <Grid>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Margin="275,10,0,10" Width="707">
+            <TabItem Header="Master View">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="124*"/>
+                        <ColumnDefinition Width="573*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="elevatorimage1" HorizontalAlignment="Left" Height="153" Margin="104,50,0,0" VerticalAlignment="Top" Width="77" Source="C:/Users/cen480270b/Desktop/ClassGraphics/floor1.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+                    <Image x:Name="elevatorimage2" HorizontalAlignment="Left" Height="153" Margin="136.353,50,0,0" VerticalAlignment="Top" Width="77" Source="C:/Users/cen480270b/Desktop/ClassGraphics/floor1.png" Stretch="Fill" Grid.Column="1"/>
+                    <Image x:Name="elevatorimage3" HorizontalAlignment="Left" Height="153" Margin="296.353,50,0,0" VerticalAlignment="Top" Width="77" Source="C:/Users/cen480270b/Desktop/ClassGraphics/floor1.png" Stretch="Fill" Grid.Column="1"/>
+                    <Image x:Name="elevatorimage4" HorizontalAlignment="Left" Height="153" Margin="460.353,50,0,0" VerticalAlignment="Top" Width="77" Source="C:/Users/cen480270b/Desktop/ClassGraphics/floor1.png" Stretch="Fill" Grid.Column="1"/>
+                    <Label x:Name="label3" Content="Elevator 1" HorizontalAlignment="Left" Margin="104,19,0,0" VerticalAlignment="Top" Width="77" Grid.ColumnSpan="2"/>
+                    <Label x:Name="label3_Copy" Content="Elevator 2" HorizontalAlignment="Left" Margin="136.353,21,0,0" VerticalAlignment="Top" Width="77" Grid.Column="1"/>
+                    <Label x:Name="label3_Copy1" Content="Elevator 3" HorizontalAlignment="Left" Margin="296.353,21,0,0" VerticalAlignment="Top" Width="77" Grid.Column="1"/>
+                    <Label x:Name="label3_Copy2" Content="Elevator 4" HorizontalAlignment="Left" Margin="460.353,19,0,0" VerticalAlignment="Top" Width="77" Grid.Column="1"/>
+                    <Image x:Name="el1statusfl5" HorizontalAlignment="Left" Height="26" Margin="71,52,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el2statusfl5" HorizontalAlignment="Left" Height="26" Margin="103.353,52,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el2statusfl4" HorizontalAlignment="Left" Height="26" Margin="103.353,86,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el2statusfl3" HorizontalAlignment="Left" Height="26" Margin="103.353,115,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" RenderTransformOrigin="0.636,0.885" Grid.Column="1"/>
+                    <Image x:Name="el2statusfl2" HorizontalAlignment="Left" Height="26" Margin="103.353,146,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el2statusfl1" HorizontalAlignment="Left" Height="26" Margin="103.353,177,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el1statusfl3" HorizontalAlignment="Left" Height="26" Margin="71,112,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el1statusfl2" HorizontalAlignment="Left" Height="26" Margin="71,146,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el1statusfl1" HorizontalAlignment="Left" Height="26" Margin="71,177,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" RenderTransformOrigin="0.455,3.385"/>
+                    <Image x:Name="el1statusfl4" HorizontalAlignment="Left" Height="26" Margin="71,81,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el3statusfl1" HorizontalAlignment="Left" Height="26" Margin="263.353,177,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el3statusfl2" HorizontalAlignment="Left" Height="26" Margin="263.353,146,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" RenderTransformOrigin="10.394,4.269" Grid.Column="1"/>
+                    <Image x:Name="el3statusfl3" HorizontalAlignment="Left" Height="26" Margin="263.353,115,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el3statusfl4" HorizontalAlignment="Left" Height="26" Margin="263.353,84,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el3statusfl5" HorizontalAlignment="Left" Height="26" Margin="263.353,52,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el4statusfl5" HorizontalAlignment="Left" Height="26" Margin="427.353,50,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el4statusfl4" HorizontalAlignment="Left" Height="26" Margin="427.353,84,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el4statusfl3" HorizontalAlignment="Left" Height="26" Margin="427.353,115,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el4statusfl2" HorizontalAlignment="Left" Height="26" Margin="427.353,146,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Image x:Name="el4statusfl1" HorizontalAlignment="Left" Height="26" Margin="427.353,177,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" Grid.Column="1"/>
+                    <Button x:Name="masterOpenFloor" Content="Open Floor" HorizontalAlignment="Left" Margin="136.353,292,0,0" VerticalAlignment="Top" Width="134" Click="masterOpenFloor_Click" Grid.Column="1"/>
+                    <Button x:Name="masterStartElevators" Content="Start Elevators" HorizontalAlignment="Left" Margin="384.353,292,0,0" VerticalAlignment="Top" Width="134" Click="masterStartElevators_Click" Grid.Column="1"/>
+                    <Button x:Name="masterLockElevator" Content="Lock Elevator" HorizontalAlignment="Left" Margin="27,292,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.307,0.591" Click="masterLockElevator_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="masterEmergencyStop" Content="Emergency Stop" HorizontalAlignment="Left" Margin="384.353,265,0,0" VerticalAlignment="Top" Width="134" Click="masterEmergencyStop_Click" Grid.Column="1"/>
+                    <Button x:Name="masterCloseFloor" Content="Close Floor" HorizontalAlignment="Left" Margin="136.353,265,0,0" VerticalAlignment="Top" Width="134" Click="masterCloseFloor_Click" Grid.Column="1"/>
+                    <Button x:Name="masterUnlockElevator" Content="Unlock Elevator" HorizontalAlignment="Left" Margin="27,265,0,0" VerticalAlignment="Top" Width="136" Click="masterUnlockElevator_Click" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="comboBoxElevator" HorizontalAlignment="Left" Margin="58.353,278,0,0" VerticalAlignment="Top" Width="57" SelectionChanged="comboBox_ElevatorSelection" Grid.Column="1"/>
+                    <ComboBox x:Name="comboBoxFloor" HorizontalAlignment="Left" Margin="296.353,278,0,0" VerticalAlignment="Top" Width="59" SelectionChanged="comboBox_FloorSelection" Grid.Column="1"/>
+                    <Label x:Name="label2" Content="Select&#xD;&#xA;Elevator" HorizontalAlignment="Left" Margin="58.353,228,0,0" VerticalAlignment="Top" Height="45" Width="57" Grid.Column="1"/>
+                    <Label x:Name="label5" Content="Select&#xD;&#xA;Floor" HorizontalAlignment="Left" Margin="296.353,228,0,0" VerticalAlignment="Top" Height="45" Width="59" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Elevator 1" Margin="2,0,-6,-3">
+                <Grid Background="#FFE5E5E5">
+                    <Image x:Name="elevatorimaget1" HorizontalAlignment="Left" Height="153" Margin="104,50,0,0" VerticalAlignment="Top" Width="77" Source="C:/Users/cen480270b/Desktop/ClassGraphics/floor1.png" Stretch="Fill"/>
+                    <Label x:Name="label4" Content="Elevator 1" HorizontalAlignment="Left" Margin="104,19,0,0" VerticalAlignment="Top" Width="77"/>
+                    <Image x:Name="el1statusflt5" HorizontalAlignment="Left" Height="26" Margin="71,52,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el1statusflt3" HorizontalAlignment="Left" Height="26" Margin="71,112,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el1statusflt2" HorizontalAlignment="Left" Height="26" Margin="71,146,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el1statusflt1" HorizontalAlignment="Left" Height="26" Margin="71,177,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" RenderTransformOrigin="0.455,3.385"/>
+                    <Image x:Name="el1statusflt4" HorizontalAlignment="Left" Height="26" Margin="71,81,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Button x:Name="tabOneLockElevator" Content="Lock Elevator" HorizontalAlignment="Left" Margin="45,252,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.307,0.591" Click="tabOneLockElevator_Click"/>
+                    <Button x:Name="tabOneEmergencyStop" Content="Emergency Stop" HorizontalAlignment="Left" Margin="47,279,0,0" VerticalAlignment="Top" Width="134" Click="tabOneEmergencyStop_Click"/>
+                    <Button x:Name="tabOneUnlockElevator" Content="Unlock Elevator" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top" Width="136" Click="tabOneUnlockElevator_Click"/>
+                    <Button x:Name="tabOnePush4" Content="4" HorizontalAlignment="Left" Margin="222,278,0,0" VerticalAlignment="Top" Width="75" Click="tabOnePush4_Click"/>
+                    <Button x:Name="tabOnePush2" Content="2" HorizontalAlignment="Left" Margin="222,224,0,0" VerticalAlignment="Top" Width="75" Click="tabOnePush2_Click"/>
+                    <Button x:Name="tabOnePush5" Content="5" HorizontalAlignment="Left" Margin="222,305,0,0" VerticalAlignment="Top" Width="75" Click="tabOnePush5_Click"/>
+                    <Button x:Name="tabOnePush3" Content="3" HorizontalAlignment="Left" Margin="222,251,0,0" VerticalAlignment="Top" Width="75" Click="tabOnePush3_Click"/>
+                    <Button x:Name="tabOnePush1" Content="1" HorizontalAlignment="Left" Margin="222,197,0,0" VerticalAlignment="Top" Width="75" Click="tabOnePush1_Click"/>
+                    <Button x:Name="tabOneOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="332,252,0,0" VerticalAlignment="Top" Width="75" Click="tabOneOpenDoor_Click"/>
+                    <Button x:Name="tabOneCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="332,225,0,0" VerticalAlignment="Top" Width="75" Click="tabOneCloseDoor_Click"/>
+                    <Button x:Name="tabOneCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="20,320,0,0" VerticalAlignment="Top" Width="134" Click="tabOneCallElevator_Click"/>
+                    <Label x:Name="tabEl1Status" Content="Elevator Data:&#xD;&#xA;Elevator Status: Inactive&#xD;&#xA;Number of Trips this session:&#xD;&#xA;Floors traveled:&#xD;&#xA;Floors Locked:&#xD;&#xA;Floors Closed:&#xD;&#xA;" HorizontalAlignment="Left" Margin="444,81,0,0" VerticalAlignment="Top" Height="122" Width="165"/>
+                    <Label x:Name="label6" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="237,166,0,0" VerticalAlignment="Top" Width="158"/>
+                    <ComboBox x:Name="el1CallSelect" HorizontalAlignment="Left" Margin="159,320,0,0" VerticalAlignment="Top" Width="41" SelectionChanged="el1CallSelect_SelectionChanged"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Elevator 2">
+                <Grid Background="#FFE5E5E5">
+                    <Image x:Name="elevatorimaget2" HorizontalAlignment="Left" Height="153" Margin="104,50,0,0" VerticalAlignment="Top" Width="77" Source="C:/Users/cen480270b/Desktop/ClassGraphics/floor1.png" Stretch="Fill"/>
+                    <Label x:Name="label7" Content="Elevator 2" HorizontalAlignment="Left" Margin="104,19,0,0" VerticalAlignment="Top" Width="77"/>
+                    <Image x:Name="el2statusflt5" HorizontalAlignment="Left" Height="26" Margin="71,52,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el2statusflt3" HorizontalAlignment="Left" Height="26" Margin="71,112,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el2statusflt2" HorizontalAlignment="Left" Height="26" Margin="71,146,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el2statusflt1" HorizontalAlignment="Left" Height="26" Margin="71,177,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" RenderTransformOrigin="0.455,3.385"/>
+                    <Image x:Name="el2statusflt4" HorizontalAlignment="Left" Height="26" Margin="71,81,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Button x:Name="tabTwoLockElevator" Content="Lock Elevator" HorizontalAlignment="Left" Margin="45,252,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.307,0.591" Click="tabTwoLockElevator_Click"/>
+                    <Button x:Name="tabTwoEmergencyStop" Content="Emergency Stop" HorizontalAlignment="Left" Margin="47,279,0,0" VerticalAlignment="Top" Width="134" Click="tabTwoEmergencyStop_Click"/>
+                    <Button x:Name="tabTwoUnlockElevator" Content="Unlock Elevator" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top" Width="136" Click="tabTwoUnlockElevator_Click"/>
+                    <Button x:Name="tabTwoPush4" Content="4" HorizontalAlignment="Left" Margin="222,278,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush4_Click"/>
+                    <Button x:Name="tabTwoPush2" Content="2" HorizontalAlignment="Left" Margin="222,224,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush2_Click"/>
+                    <Button x:Name="tabTwoPush5" Content="5" HorizontalAlignment="Left" Margin="222,305,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush5_Click"/>
+                    <Button x:Name="tabTwoPush3" Content="3" HorizontalAlignment="Left" Margin="222,251,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush3_Click"/>
+                    <Button x:Name="tabTwoPush1" Content="1" HorizontalAlignment="Left" Margin="222,197,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush1_Click"/>
+                    <Button x:Name="tabTwoOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="332,252,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoOpenDoor_Click"/>
+                    <Button x:Name="tabTwoCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="332,225,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoCloseDoor_Click"/>
+                    <Button x:Name="tabTwoCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="10,324,0,0" VerticalAlignment="Top" Width="134" Click="tabTwoCallElevator_Click"/>
+                    <Label x:Name="tabEl2Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Number of Trips this session:&#xA;Floors traveled:&#xA;Floors Locked:&#xA;Floors Closed:&#xA;" HorizontalAlignment="Left" Margin="444,81,0,0" VerticalAlignment="Top" Height="122" Width="165"/>
+                    <Label x:Name="label9" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="237,166,0,0" VerticalAlignment="Top" Width="158"/>
+                    <ComboBox x:Name="el2CallSelect" HorizontalAlignment="Left" Margin="149,324,0,0" VerticalAlignment="Top" Width="41" SelectionChanged="el2CallSelect_SelectionChanged"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Elevator 3" Margin="0,0,-4,-3">
+                <Grid Background="#FFE5E5E5">
+                    <Image x:Name="elevatorimaget3" HorizontalAlignment="Left" Height="153" Margin="104,50,0,0" VerticalAlignment="Top" Width="77" Source="C:/Users/cen480270b/Desktop/ClassGraphics/floor1.png" Stretch="Fill"/>
+                    <Label x:Name="label10" Content="Elevator 3" HorizontalAlignment="Left" Margin="104,19,0,0" VerticalAlignment="Top" Width="77"/>
+                    <Image x:Name="el3statusflt5" HorizontalAlignment="Left" Height="26" Margin="71,52,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el3statusflt3" HorizontalAlignment="Left" Height="26" Margin="71,112,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el3statusflt2" HorizontalAlignment="Left" Height="26" Margin="71,146,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el3statusflt1" HorizontalAlignment="Left" Height="26" Margin="71,177,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" RenderTransformOrigin="0.455,3.385"/>
+                    <Image x:Name="el3statusflt4" HorizontalAlignment="Left" Height="26" Margin="71,81,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Button x:Name="tabThreeLockElevator" Content="Lock Elevator" HorizontalAlignment="Left" Margin="45,252,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.307,0.591" Click="tabThreeLockElevator_Click"/>
+                    <Button x:Name="tabThreeEmergencyStop" Content="Emergency Stop" HorizontalAlignment="Left" Margin="47,279,0,0" VerticalAlignment="Top" Width="134" Click="tabThreeEmergencyStop_Click"/>
+                    <Button x:Name="tabThreeUnlockElevator" Content="Unlock Elevator" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top" Width="136" Click="tabThreeUnlockElevator_Click"/>
+                    <Button x:Name="tabThreePush4" Content="4" HorizontalAlignment="Left" Margin="222,278,0,0" VerticalAlignment="Top" Width="75" Click="tabThreePush4_Click"/>
+                    <Button x:Name="tabThreePush2" Content="2" HorizontalAlignment="Left" Margin="222,224,0,0" VerticalAlignment="Top" Width="75" Click="tabThreePush2_Click"/>
+                    <Button x:Name="tabThreePush5" Content="5" HorizontalAlignment="Left" Margin="222,305,0,0" VerticalAlignment="Top" Width="75" Click="tabThreePush5_Click"/>
+                    <Button x:Name="tabThreePush3" Content="3" HorizontalAlignment="Left" Margin="222,251,0,0" VerticalAlignment="Top" Width="75" Click="tabThreePush3_Click"/>
+                    <Button x:Name="tabThreePush1" Content="1" HorizontalAlignment="Left" Margin="222,197,0,0" VerticalAlignment="Top" Width="75" Click="tabThreePush1_Click"/>
+                    <Button x:Name="tabThreeOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="332,252,0,0" VerticalAlignment="Top" Width="75" Click="tabThreeOpenDoor_Click"/>
+                    <Button x:Name="tabThreeCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="332,225,0,0" VerticalAlignment="Top" Width="75" Click="tabThreeCloseDoor_Click"/>
+                    <Button x:Name="tabThreeCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="10,322,0,0" VerticalAlignment="Top" Width="134" Click="tabThreeCallElevator_Click"/>
+                    <Label x:Name="tabEl3Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Number of Trips this session:&#xA;Floors traveled:&#xA;Floors Locked:&#xA;Floors Closed:&#xA;" HorizontalAlignment="Left" Margin="444,81,0,0" VerticalAlignment="Top" Height="122" Width="165"/>
+                    <Label x:Name="label12" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="237,166,0,0" VerticalAlignment="Top" Width="158"/>
+                    <ComboBox x:Name="el3CallSelect" HorizontalAlignment="Left" Margin="149,322,0,0" VerticalAlignment="Top" Width="41" SelectionChanged="el3CallSelect_SelectionChanged"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Elevator 4">
+                <Grid Background="#FFE5E5E5">
+                    <Image x:Name="elevatorimaget4" HorizontalAlignment="Left" Height="153" Margin="104,50,0,0" VerticalAlignment="Top" Width="77" Source="C:/Users/cen480270b/Desktop/ClassGraphics/floor1.png" Stretch="Fill"/>
+                    <Label x:Name="label13" Content="Elevator 4" HorizontalAlignment="Left" Margin="104,19,0,0" VerticalAlignment="Top" Width="77"/>
+                    <Image x:Name="el4statusflt5" HorizontalAlignment="Left" Height="26" Margin="71,52,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el4statusflt3" HorizontalAlignment="Left" Height="26" Margin="71,112,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el4statusflt2" HorizontalAlignment="Left" Height="26" Margin="71,146,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Image x:Name="el4statusflt1" HorizontalAlignment="Left" Height="26" Margin="71,177,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png" RenderTransformOrigin="0.455,3.385"/>
+                    <Image x:Name="el4statusflt4" HorizontalAlignment="Left" Height="26" Margin="71,81,0,0" VerticalAlignment="Top" Width="33" Source="C:/Users/cen480270b/Desktop/ClassGraphics/bad.png"/>
+                    <Button x:Name="tabFourLockElevator" Content="Lock Elevator" HorizontalAlignment="Left" Margin="45,252,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.307,0.591" Click="tabFourLockElevator_Click"/>
+                    <Button x:Name="tabFourEmergencyStop" Content="Emergency Stop" HorizontalAlignment="Left" Margin="47,279,0,0" VerticalAlignment="Top" Width="134" Click="tabFourEmergencyStop_Click"/>
+                    <Button x:Name="tabFourUnlockElevator" Content="Unlock Elevator" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top" Width="136" Click="tabFourUnlockElevator_Click"/>
+                    <Button x:Name="tabFourPush4" Content="4" HorizontalAlignment="Left" Margin="222,278,0,0" VerticalAlignment="Top" Width="75" Click="tabFourPush4_Click"/>
+                    <Button x:Name="tabFourPush2" Content="2" HorizontalAlignment="Left" Margin="222,224,0,0" VerticalAlignment="Top" Width="75" Click="tabFourPush2_Click"/>
+                    <Button x:Name="tabFourPush5" Content="5" HorizontalAlignment="Left" Margin="222,305,0,0" VerticalAlignment="Top" Width="75" Click="tabFourPush5_Click"/>
+                    <Button x:Name="tabFourPush3" Content="3" HorizontalAlignment="Left" Margin="222,251,0,0" VerticalAlignment="Top" Width="75" Click="tabFourPush3_Click"/>
+                    <Button x:Name="tabFourPush1" Content="1" HorizontalAlignment="Left" Margin="222,197,0,0" VerticalAlignment="Top" Width="75" Click="tabFourPush1_Click"/>
+                    <Button x:Name="tabFourOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="332,252,0,0" VerticalAlignment="Top" Width="75" Click="tabFourOpenDoor_Click"/>
+                    <Button x:Name="tabFourCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="332,225,0,0" VerticalAlignment="Top" Width="75" Click="tabFourCloseDoor_Click"/>
+                    <Button x:Name="tabFourCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top" Width="134" Click="tabFourCallElevator_Click" RenderTransformOrigin="0.269,1.909"/>
+                    <Label x:Name="tabEl1Status1" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Number of Trips this session:&#xA;Floors traveled:&#xA;Floors Locked:&#xA;Floors Closed:&#xA;" HorizontalAlignment="Left" Margin="444,81,0,0" VerticalAlignment="Top" Height="122" Width="165"/>
+                    <Label x:Name="label15" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="237,166,0,0" VerticalAlignment="Top" Width="158"/>
+                    <ComboBox x:Name="el4CallSelect" HorizontalAlignment="Left" Margin="149,320,0,0" VerticalAlignment="Top" Width="41" SelectionChanged="el4CallSelect_SelectionChanged"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Label x:Name="label" Content="Elevator 1" HorizontalAlignment="Left" Margin="35,48,0,0" VerticalAlignment="Top" Height="25" Width="64"/>
+        <Label x:Name="label_Copy" Content="Elevator 4" HorizontalAlignment="Left" Margin="35,282,0,0" VerticalAlignment="Top" Height="25" Width="64"/>
+        <Label x:Name="label_Copy1" Content="Elevator 3" HorizontalAlignment="Left" Margin="35,203,0,0" VerticalAlignment="Top" Height="25" Width="64"/>
+        <Label x:Name="label_Copy2" Content="Elevator 2" HorizontalAlignment="Left" Margin="35,128,0,0" VerticalAlignment="Top" Height="25" Width="64"/>
+        <Label x:Name="label1" Content="Elevator Status" HorizontalAlignment="Left" Margin="66,12,0,0" VerticalAlignment="Top" Height="36" Width="139"/>
+        <Label x:Name="mainEl1Status" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,78,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
+        <Label x:Name="mainEl4Status1" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,307,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
+        <Label x:Name="mainEl3Status1" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,233,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
+        <Label x:Name="mainEl2Status" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,155,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
+
+    </Grid>
+</Window>

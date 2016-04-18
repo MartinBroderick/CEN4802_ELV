@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorldView"
         mc:Ignorable="d"
-        Title="Elevator Control GUI" Height="450" Width="1000">
+        Title="Elevator Control GUI" Height="652.689" Width="1221.596">
     <Grid>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Margin="275,10,0,10" Width="707">
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Margin="275,10,0,10" Width="707" SelectionChanged="tabControl_SelectionChanged">
             <TabItem Header="Master View">
-                <Grid Background="#FFE5E5E5">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,221">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="124*"/>
                         <ColumnDefinition Width="573*"/>
@@ -164,6 +164,7 @@
         <Label x:Name="mainEl4Status1" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,307,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
         <Label x:Name="mainEl3Status1" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,233,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
         <Label x:Name="mainEl2Status" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,155,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
+        <ContentControl Name="contentcontrol1" Width="800" Height="600" Content="{Binding Path=\\psf\Home\Desktop\classproject\WorldView\WorldView\InteriorElevator\UserControl1.xaml}" HorizontalAlignment="right" Margin="-22,97,436,-74" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

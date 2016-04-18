@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.VisualBasic;
+using WorldView.InteriorElevator;
 
 namespace WorldView
 {
@@ -55,14 +56,16 @@ namespace WorldView
         public static int el2Call = 0;
         public static int el3Call = 0;
         public static int el4Call = 0;
-        public static string path = (System.AppDomain.CurrentDomain.BaseDirectory);
+        public static string path = "//psf/Home/Desktop/ClassGraphics/";
 
 
         public MainWindow()
         {
+            
             InitializeComponent(); //initialize the GUI interface
             //var elevator = new List<Elevator>(); //create a temporary List item of the elevator systems current state
-
+            InteriorElevator.UserControl1 intEle = new InteriorElevator.UserControl1();
+            contentcontrol1.Content = intEle;
             //Test Values
             for (int i = 1; i < 5; i++)
             {
@@ -1115,6 +1118,11 @@ namespace WorldView
         private void el4CallSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             el4Call = Int32.Parse("" + el4CallSelect.SelectedValue);
+        }
+
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 

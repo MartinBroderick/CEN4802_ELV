@@ -26,3 +26,17 @@ C:\Users\Atom\Desktop\classproject\WorldView\WorldView\obj\Debug\WorldView.pdb
 \\psf\Home\Desktop\classproject\WorldView\WorldView\obj\Debug\WorldView.exe
 \\psf\Home\Desktop\classproject\WorldView\WorldView\obj\Debug\WorldView.pdb
 \\psf\Home\Desktop\classproject\WorldView\WorldView\obj\Debug\WorldView.csprojResolveAssemblyReference.cache
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\bin\Debug\WorldView.exe.config
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\WorldView.exe
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\WorldView.pdb
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\bin\Debug\WorldView.exe
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\bin\Debug\WorldView.pdb
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\WorldView.csprojResolveAssemblyReference.cache
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\MainWindow.g.cs
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\App.g.cs
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\WorldView_MarkupCompile.cache
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\WorldView_MarkupCompile.lref
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\MainWindow.baml
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\WorldView.g.resources
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\WorldView.Properties.Resources.resources
+C:\Users\admin\Source\Repos\CEN4802_ELV\classproject\WorldView\WorldView\obj\Debug\WorldView.csproj.GenerateResource.Cache

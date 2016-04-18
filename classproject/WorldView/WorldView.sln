@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{54179330-35CE-49E2-8B74-61CCB0053B03}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\ClassGraphics\bad.png = ..\..\ClassGraphics\bad.png
-		Controller.cs = Controller.cs
 		..\..\ClassGraphics\floor1.png = ..\..\ClassGraphics\floor1.png
 		..\..\ClassGraphics\floor2.png = ..\..\ClassGraphics\floor2.png
 		..\..\ClassGraphics\floor3.png = ..\..\ClassGraphics\floor3.png

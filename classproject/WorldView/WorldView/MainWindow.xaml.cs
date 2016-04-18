@@ -56,7 +56,7 @@ namespace WorldView
         public static int el2Call = 0;
         public static int el3Call = 0;
         public static int el4Call = 0;
-        public static string path = "//psf/Home/Desktop/ClassGraphics/";
+        public static string path = (System.AppDomain.CurrentDomain.BaseDirectory);
 
 
         public MainWindow()

@@ -22,6 +22,7 @@ namespace OutsideUITest.OutsideUI {
 
 		OutsideMainPanel mainPanel;
 		Random random = new Random();
+		Button lastButtonPushed;
 
 		int floor = 3;
 
@@ -50,9 +51,15 @@ namespace OutsideUITest.OutsideUI {
 
 			illuminateButton(btn);
 
-			updateDisplay(2000, btn);
+			lastButtonPushed = btn;
 
-			
+			//testing
+
+			//updateDisplay(3, 2, 1);
+
+			//updateDisplay(2000, btn);
+
+			//main class request call;
 
 
 
@@ -68,13 +75,16 @@ namespace OutsideUITest.OutsideUI {
 			}
 		}
 
-		private async void updateDisplay(int timeToDelay, Button btn) {
+		private void updateDisplay(int selFloor, int selElevator, int floorUpdate) { //async
 
-			int selected = random.Next(0, 4);
-			Display display = this.mainPanel.displays[selected];
+			//for testing
+			//int timeToDelay = 2000;
 
-			int floor = Convert.ToInt32(floorNum.Content);
-			int position = display.getLocation();
+			int adjustedFloor = selFloor - 1;
+			int adjustedElevator = selElevator - 1;
+			Display display = this.mainPanel.displays[adjustedElevator];
+
+			/*int position = display.getLocation();
 			if (floor > position) {
 				while (floor > position) {
 					await Task.Delay(timeToDelay);
@@ -89,11 +99,14 @@ namespace OutsideUITest.OutsideUI {
 					position -= 1;
 					display.updateDisplay(position);
 				}
+			}*/
+
+			display.updateDisplay(floorUpdate);
+
+			if (selFloor == floorUpdate) {
+				illuminateButton(lastButtonPushed);
+				MessageBox.Show("Elevator " + (selFloor + 1) + " has arrived at the floor.");
 			}
-
-			illuminateButton(btn);
-
-			MessageBox.Show("Elevator "+(selected + 1)+" has arrived at the floor.");
 
 		}
 	}

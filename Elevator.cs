@@ -127,7 +127,10 @@ namespace Sark___Hardware_Component
             else if (currentFloor == nextfloor)
             {
                 Status = "Elevator is already on the correct floor";
-                Timer(1);
+                Timer(2);
+                DoorOpenRoutine();
+                Timer(2);
+
             }
             else
             {

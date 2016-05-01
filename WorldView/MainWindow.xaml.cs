@@ -141,7 +141,7 @@ namespace WorldView
         private void tabOneCallElevator_Click(object sender, RoutedEventArgs e)
         {
             if (el1CallSelect.SelectedIndex != -1) {
-                hardwareElevators[0].MoveToFloor(el1CallSelect.SelectedIndex + 1 + 1);
+                hardwareElevators[0].MoveToFloor(el1CallSelect.SelectedIndex + 1);
                 updateView(getStates());
             }
             else
@@ -424,6 +424,12 @@ namespace WorldView
             Image[][] vatorsTabService = { vator1TabService, vator2TabService, vator3TabService, vator4TabService };
             Image[][] vatorsService = { vator1Service, vator2Service, vator3Service, vator4Service };
             
+            //World View Update Label Controls
+            for(int i = 0; i<4; i++)
+            {
+
+            }
+
             for  (int i = 0; i < vatorStates.Length; i++) {
                 if (vatorStates[i][2] == 1)
                 {
@@ -637,10 +643,22 @@ namespace WorldView
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             ((Button)sender).Background = Brushes.Yellow;
+            string closestElevator = "someElevatorThatIsCloseButNoTacos";
+            int marker = 5;
+            foreach (Elevator el in hardwareElevators)
+            {
+                if (Math.Abs(cmbFloor.SelectedIndex - el.currentFloor) < marker)
+                {
+                    marker = Math.Abs(cmbFloor.SelectedIndex - el.currentFloor);
+                    closestElevator = el.Name;
+                }
+            }
 
             foreach (Elevator el in hardwareElevators)
             {
-                el.MoveToFloor(cmbFloor.SelectedIndex + 1);
+                if(el.Name == closestElevator) {
+                    el.MoveToFloor(cmbFloor.SelectedIndex + 1);
+                }
             }
             await Task.Delay(1000);
 
@@ -775,6 +793,7 @@ namespace WorldView
 
             public void MoveToFloor(int nextfloor)
             {
+
                 if (inService == false)
                 {
                     MainWindow.sysMessage(this.Name + ": Elevator not in Service");
@@ -788,7 +807,6 @@ namespace WorldView
                     nextFloor = nextfloor;
                     DoorOpenRoutine();
                     ElevatorMove();
-
                 }
             }
 

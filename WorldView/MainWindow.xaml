@@ -104,8 +104,10 @@
             <TabItem Header="Elevator 3" Margin="0,0,-4,-3">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="166*"/>
-                        <ColumnDefinition Width="535*"/>
+                        <ColumnDefinition Width="165*"/>
+                        <ColumnDefinition Width="156*"/>
+                        <ColumnDefinition Width="76*"/>
+                        <ColumnDefinition Width="300*"/>
                     </Grid.ColumnDefinitions>
                     <Image x:Name="elevatorimaget3" HorizontalAlignment="Left" Height="153" Margin="104,50,0,0" VerticalAlignment="Top" Width="77" Source="/images/floor1.png" Stretch="Fill" Grid.ColumnSpan="2"/>
                     <Label x:Name="label10" Content="Elevator 3" HorizontalAlignment="Left" Margin="104,19,0,0" VerticalAlignment="Top" Width="77" Grid.ColumnSpan="2"/>
@@ -121,15 +123,15 @@
                     <Button x:Name="tabThreePush5" Content="5" HorizontalAlignment="Left" Margin="56,305,0,0" VerticalAlignment="Top" Width="75" Click="tabThreePush5_Click" Grid.Column="1"/>
                     <Button x:Name="tabThreePush3" Content="3" HorizontalAlignment="Left" Margin="56,251,0,0" VerticalAlignment="Top" Width="75" Click="tabThreePush3_Click" Grid.Column="1"/>
                     <Button x:Name="tabThreePush1" Content="1" HorizontalAlignment="Left" Margin="56,197,0,0" VerticalAlignment="Top" Width="75" Click="tabThreePush1_Click" Grid.Column="1"/>
-                    <Button x:Name="tabThreeOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="166,252,0,0" VerticalAlignment="Top" Width="75" Click="tabThreeOpenDoor_Click" Grid.Column="1"/>
-                    <Button x:Name="tabThreeCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="166,225,0,0" VerticalAlignment="Top" Width="75" Click="tabThreeCloseDoor_Click" Grid.Column="1"/>
+                    <Button x:Name="tabThreeOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="10,252,0,0" VerticalAlignment="Top" Width="75" Click="tabThreeOpenDoor_Click" Grid.Column="2" Grid.ColumnSpan="2"/>
+                    <Button x:Name="tabThreeCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="75" Click="tabThreeCloseDoor_Click" Grid.Column="2" Grid.ColumnSpan="2"/>
                     <Button x:Name="tabThreeCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="10,322,0,0" VerticalAlignment="Top" Width="134" Click="tabThreeCallElevator_Click"/>
-                    <Label x:Name="tabEl3Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Current Floor: 0&#xA;Door Status: Closed&#xA;" HorizontalAlignment="Left" Margin="278,81,0,0" VerticalAlignment="Top" Height="81" Width="165" Grid.Column="1"/>
-                    <Label x:Name="label12" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="71,166,0,0" VerticalAlignment="Top" Width="158" Grid.Column="1"/>
+                    <Label x:Name="label12" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="71,166,0,0" VerticalAlignment="Top" Width="158" Grid.Column="1" Grid.ColumnSpan="2"/>
                     <ComboBox x:Name="el3CallSelect" HorizontalAlignment="Left" Margin="149,322,0,0" VerticalAlignment="Top" Width="41" Grid.ColumnSpan="2"/>
+                    <Label x:Name="tabEl3Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Current Floor: 0&#xA;Door Status: Closed" HorizontalAlignment="Left" Margin="47,81,0,0" VerticalAlignment="Top" Height="91" Width="165" Grid.Column="3"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Elevator 4">
+            <TabItem Header="Elevator 4" HorizontalAlignment="Left" Width="66">
                 <Grid Background="#FFE5E5E5">
                     <Image x:Name="elevatorimaget4" HorizontalAlignment="Left" Height="153" Margin="104,50,0,0" VerticalAlignment="Top" Width="77" Source="/images/floor1.png" Stretch="Fill"/>
                     <Label x:Name="label13" Content="Elevator 4" HorizontalAlignment="Left" Margin="104,19,0,0" VerticalAlignment="Top" Width="77"/>

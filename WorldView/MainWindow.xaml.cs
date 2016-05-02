@@ -73,31 +73,31 @@ namespace WorldView
 
             updateView(getStates()); //update the GUI
         }
+        
+        // **SIMULATION PURPOSES ONLY..**
+        //internal string Status1
+        //{
+        //    get { return tabEl1Status.Content.ToString(); }
+        //    set { Dispatcher.Invoke(new Action(() => { tabEl1Status.Content = value; })); }
+        //}
 
-        //Modern Equivalent to Delegates **SIMULATION PURPOSES ONLY..**
-        internal string Status1
-        {
-            get { return tabEl1Status.Content.ToString(); }
-            set { Dispatcher.Invoke(new Action(() => { tabEl1Status.Content = value; })); }
-        }
+        //internal string Status2
+        //{
+        //    get { return tabEl2Status.Content.ToString(); }
+        //    set { Dispatcher.Invoke(new Action(() => { tabEl2Status.Content = value; })); }
+        //}
 
-        internal string Status2
-        {
-            get { return tabEl2Status.Content.ToString(); }
-            set { Dispatcher.Invoke(new Action(() => { tabEl2Status.Content = value; })); }
-        }
+        //internal string Status3
+        //{
+        //    get { return tabEl3Status.Content.ToString(); }
+        //    set { Dispatcher.Invoke(new Action(() => { tabEl3Status.Content = value; })); }
+        //}
 
-        internal string Status3
-        {
-            get { return tabEl3Status.Content.ToString(); }
-            set { Dispatcher.Invoke(new Action(() => { tabEl3Status.Content = value; })); }
-        }
-
-        internal string Status4
-        {
-            get { return tabEl4Status.Content.ToString(); }
-            set { Dispatcher.Invoke(new Action(() => { tabEl4Status.Content = value; })); }
-        }
+        //internal string Status4
+        //{
+        //    get { return tabEl4Status.Content.ToString(); }
+        //    set { Dispatcher.Invoke(new Action(() => { tabEl4Status.Content = value; })); }
+        //}
 
         /// <summary>
         /// MASTER CLICK EVENTS
@@ -211,6 +211,7 @@ namespace WorldView
 
         private void tabOneOpenDoor_Click(object sender, RoutedEventArgs e)
         {
+
             String simulate = tabEl1Status.Content.ToString().Replace("Closed", "Open");
             tabEl1Status.Content = simulate;
             hardwareElevators[0].DoorOpenRoutine();            
@@ -320,37 +321,37 @@ namespace WorldView
 
         private void tabThreePush1_Click(object sender, RoutedEventArgs e)
         {
-            hardwareElevators[0].MoveToFloor(1);
+            hardwareElevators[2].MoveToFloor(1);
             updateView(getStates());
         }
 
         private void tabThreePush2_Click(object sender, RoutedEventArgs e)
         {
-            hardwareElevators[3].MoveToFloor(2);
+            hardwareElevators[2].MoveToFloor(2);
             updateView(getStates());
         }
 
         private void tabThreePush3_Click(object sender, RoutedEventArgs e)
         {
-            hardwareElevators[3].MoveToFloor(3);
+            hardwareElevators[2].MoveToFloor(3);
             updateView(getStates());
         }
 
         private void tabThreePush4_Click(object sender, RoutedEventArgs e)
         {
-            hardwareElevators[3].MoveToFloor(4);
+            hardwareElevators[2].MoveToFloor(4);
             updateView(getStates());
         }
 
         private void tabThreePush5_Click(object sender, RoutedEventArgs e)
         {
-            hardwareElevators[3].MoveToFloor(5);
+            hardwareElevators[2].MoveToFloor(5);
             updateView(getStates());
         }
 
         private void tabThreeCloseDoor_Click(object sender, RoutedEventArgs e)
         {
-            hardwareElevators[3].DoorCloseRoutine();
+            hardwareElevators[2].DoorCloseRoutine();
             updateView(getStates());
         }
 
@@ -358,7 +359,7 @@ namespace WorldView
         {
             String simulate = tabEl3Status.Content.ToString().Replace("Closed", "Open");
             tabEl3Status.Content = simulate;
-            hardwareElevators[3].DoorOpenRoutine();
+            hardwareElevators[2].DoorOpenRoutine();
             updateView(getStates());
         }
 
@@ -428,8 +429,9 @@ namespace WorldView
 
         private void tabFourOpenDoor_Click(object sender, RoutedEventArgs e)
         {
+
             String simulate = tabEl4Status.Content.ToString().Replace("Closed", "Open");
-            tabEl1Status.Content = simulate;
+            tabEl4Status.Content = simulate;
             hardwareElevators[3].DoorOpenRoutine();
             updateView(getStates());
         }
@@ -679,6 +681,26 @@ namespace WorldView
         /// <param name="e"></param>
         private async void rb6_Checked(object sender, RoutedEventArgs e)
         {
+           if (cmbElevator.SelectedIndex == 0)
+            {
+               String simulate = ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl1Status.Content.ToString().Replace("Closed", "Open");
+                ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl1Status.Content = simulate;
+            }
+            else if (cmbElevator.SelectedIndex == 1)
+            {
+                String simulate = ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl2Status.Content.ToString().Replace("Closed", "Open");
+                ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl2Status.Content = simulate;
+            }
+            else if (cmbElevator.SelectedIndex == 2)
+            {
+                String simulate = ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl3Status.Content.ToString().Replace("Closed", "Open");
+                ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl3Status.Content = simulate;
+            }
+            else if (cmbElevator.SelectedIndex == 3)
+            {
+                String simulate = ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl4Status.Content.ToString().Replace("Closed", "Open");
+                ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl4Status.Content = simulate;
+            }
             hardwareElevators[cmbElevator.SelectedIndex].DoorOpenRoutine();
             await Task.Delay(1000);
             rb6.IsChecked = false;
@@ -999,12 +1021,18 @@ namespace WorldView
                     }
 
                 }
+                
+                //access the MainWindow GUI directly...
+                ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl1Status.Content = ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl1Status.Content.ToString().Replace("Open", "Closed");
+                ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl2Status.Content = ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl2Status.Content.ToString().Replace("Open", "Closed");
+                ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl3Status.Content = ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl3Status.Content.ToString().Replace("Open", "Closed");
+                ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl4Status.Content = ((MainWindow)System.Windows.Application.Current.MainWindow).tabEl4Status.Content.ToString().Replace("Open", "Closed");
+
                 //send event to subscribed class...which is the MainWindow
-                MainWindow main = new MainWindow(); //subscribe to MainWindow
-                main.Status1 = main.Status1.Replace("Open", "Closed");
-                main.Status2 = main.Status2.Replace("Open", "Closed");
-                main.Status3 = main.Status3.Replace("Open", "Closed");
-                main.Status4 = main.Status4.Replace("Open", "Closed");
+                //main.Status1 = main.Status1.Replace("Open", "Closed");
+                //main.Status2 = main.Status2.Replace("Open", "Closed");
+                //main.Status3 = main.Status3.Replace("Open", "Closed");
+                //main.Status4 = main.Status4.Replace("Open", "Closed");
 
             }
 

@@ -52,12 +52,10 @@ namespace WorldView
 
         public MainWindow()
         {
-
             InitializeComponent(); //initialize the GUI interface
             //var elevator = new List<Elevator>(); //create a temporary List item of the elevator systems current state
             //Test Values
-
-
+            MainWindow main = this;
             welcome();
 
             string[] selections = { "1", "2", "3", "4", "5" };
@@ -74,6 +72,31 @@ namespace WorldView
             }
 
             updateView(getStates()); //update the GUI
+        }
+
+        //Modern Equivalent to Delegates **SIMULATION PURPOSES ONLY..**
+        internal string Status1
+        {
+            get { return tabEl1Status.Content.ToString(); }
+            set { Dispatcher.Invoke(new Action(() => { tabEl1Status.Content = value; })); }
+        }
+
+        internal string Status2
+        {
+            get { return tabEl2Status.Content.ToString(); }
+            set { Dispatcher.Invoke(new Action(() => { tabEl2Status.Content = value; })); }
+        }
+
+        internal string Status3
+        {
+            get { return tabEl3Status.Content.ToString(); }
+            set { Dispatcher.Invoke(new Action(() => { tabEl3Status.Content = value; })); }
+        }
+
+        internal string Status4
+        {
+            get { return tabEl4Status.Content.ToString(); }
+            set { Dispatcher.Invoke(new Action(() => { tabEl4Status.Content = value; })); }
         }
 
         /// <summary>
@@ -188,8 +211,10 @@ namespace WorldView
 
         private void tabOneOpenDoor_Click(object sender, RoutedEventArgs e)
         {
-            hardwareElevators[0].DoorOpenRoutine();
-            updateView(getStates());
+            String simulate = tabEl1Status.Content.ToString().Replace("Closed", "Open");
+            tabEl1Status.Content = simulate;
+            hardwareElevators[0].DoorOpenRoutine();            
+            updateView(getStates());            
         }
 
         /// <summary>
@@ -259,6 +284,8 @@ namespace WorldView
 
         private void tabTwoOpenDoor_Click(object sender, RoutedEventArgs e)
         {
+            String simulate = tabEl2Status.Content.ToString().Replace("Closed", "Open");
+            tabEl2Status.Content = simulate;
             hardwareElevators[1].DoorOpenRoutine();
             updateView(getStates());
         }
@@ -329,6 +356,8 @@ namespace WorldView
 
         private void tabThreeOpenDoor_Click(object sender, RoutedEventArgs e)
         {
+            String simulate = tabEl3Status.Content.ToString().Replace("Closed", "Open");
+            tabEl3Status.Content = simulate;
             hardwareElevators[3].DoorOpenRoutine();
             updateView(getStates());
         }
@@ -344,7 +373,7 @@ namespace WorldView
 
         private void tabFourEmergencyStop_Click(object sender, RoutedEventArgs e)
         {
-            hardwareElevators[3].in_Service = true;
+            hardwareElevators[3].in_Service = false;
             updateView(getStates());
         }
 
@@ -399,6 +428,8 @@ namespace WorldView
 
         private void tabFourOpenDoor_Click(object sender, RoutedEventArgs e)
         {
+            String simulate = tabEl4Status.Content.ToString().Replace("Closed", "Open");
+            tabEl1Status.Content = simulate;
             hardwareElevators[3].DoorOpenRoutine();
             updateView(getStates());
         }
@@ -424,11 +455,116 @@ namespace WorldView
             Image[][] vatorsTabService = { vator1TabService, vator2TabService, vator3TabService, vator4TabService };
             Image[][] vatorsService = { vator1Service, vator2Service, vator3Service, vator4Service };
             
-            //World View Update Label Controls
-            for(int i = 0; i<4; i++)
-            {
-
-            }
+            //World View Update Label Controls Main/Tabs          
+                if (vatorStates[0][2] == 1)
+                {
+                    mainEl1Status.Content = "Status: On" + Environment.NewLine + "Current Floor: " + vatorStates[0][0];
+                    if (vatorStates[0][1] == 0)
+                    {
+                        tabEl1Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Active" + 
+                        Environment.NewLine + "Current Floor: " + vatorStates[0][0] + Environment.NewLine + "Door Status: Open";
+                    }else if(vatorStates[0][1] == 1)
+                    {
+                        tabEl1Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Active" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[0][0] + Environment.NewLine + "Door Status: Closed";
+                    }
+                }
+                else {
+                    mainEl1Status.Content = "Status: Off" + Environment.NewLine + "Current Floor: " + vatorStates[0][0];
+                    if (vatorStates[0][1] == 0)
+                    {
+                        tabEl1Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Inactive" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[0][0] + Environment.NewLine + "Door Status: Open";
+                    }
+                    else if (vatorStates[0][1] == 1)
+                    {
+                        tabEl1Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Inactive" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[0][0] + Environment.NewLine + "Door Status: Closed";
+                    }
+                }
+                if (vatorStates[1][2] == 1)
+                {
+                    mainEl2Status.Content = "Status: On" + Environment.NewLine + "Current Floor: " + vatorStates[1][0];
+                    if (vatorStates[1][1] == 0)
+                    {
+                        tabEl2Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Active" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[1][0] + Environment.NewLine + "Door Status: Open";
+                    }
+                    else if (vatorStates[1][1] == 1)
+                    {
+                        tabEl2Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Active" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[1][0] + Environment.NewLine + "Door Status: Closed";
+                    }
+                }
+                else {
+                    mainEl2Status.Content = "Status: Off" + Environment.NewLine + "Current Floor: " + vatorStates[1][0];
+                    if (vatorStates[1][1] == 0)
+                    {
+                        tabEl2Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Inactive" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[1][0] + Environment.NewLine + "Door Status: Open";
+                    }
+                    else if (vatorStates[1][1] == 1)
+                    {
+                        tabEl2Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Inactive" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[1][0] + Environment.NewLine + "Door Status: Closed";
+                    }
+                }
+                if (vatorStates[2][2] == 1)
+                {
+                    mainEl3Status.Content = "Status: On" + Environment.NewLine + "Current Floor: " + vatorStates[2][0];
+                    if (vatorStates[2][1] == 0)
+                    {
+                        tabEl3Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Active" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[2][0] + Environment.NewLine + "Door Status: Open";
+                    }
+                    else if (vatorStates[2][1] == 1)
+                    {
+                        tabEl3Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Active" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[2][0] + Environment.NewLine + "Door Status: Closed";
+                    }
+                }
+                else
+                {                
+                    mainEl3Status.Content = "Status: Off" + Environment.NewLine + "Current Floor: " + vatorStates[2][0];
+                    if (vatorStates[2][1] == 0)
+                    {
+                        tabEl3Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Inactive" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[2][0] + Environment.NewLine + "Door Status: Open";
+                    }
+                    else if (vatorStates[2][1] == 1)
+                    {
+                        tabEl3Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Inactive" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[2][0] + Environment.NewLine + "Door Status: Closed";
+                    }
+                }
+                if (vatorStates[3][2] == 1)
+                {
+                    mainEl4Status.Content = "Status: On" + Environment.NewLine + "Current Floor: " + vatorStates[3][0];
+                    if (vatorStates[3][1] == 0)
+                    {
+                        tabEl4Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Active" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[3][0] + Environment.NewLine + "Door Status: Open";
+                    }
+                    else if (vatorStates[3][1] == 1)
+                    {
+                        tabEl4Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Active" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[3][0] + Environment.NewLine + "Door Status: Closed";
+                    }
+                }
+                else {
+                    mainEl4Status.Content = "Status: Off" + Environment.NewLine + "Current Floor: " + vatorStates[3][0];
+                    if (vatorStates[3][1] == 0)
+                    {
+                        tabEl4Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Inactive" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[3][0] + Environment.NewLine + "Door Status: Open";
+                    }
+                    else if (vatorStates[3][1] == 1)
+                    {
+                        tabEl4Status.Content = "Elevator Data:" + Environment.NewLine + "Elevator Status: Inactive" +
+                        Environment.NewLine + "Current Floor: " + vatorStates[3][0] + Environment.NewLine + "Door Status: Closed";
+                    }
+                }
+ 
 
             for  (int i = 0; i < vatorStates.Length; i++) {
                 if (vatorStates[i][2] == 1)
@@ -452,7 +588,7 @@ namespace WorldView
                 vatorTabFloor[i].Source = new BitmapImage(new Uri(path + "floor" + vatorStates[i][0] + ".png"));
             }
         }
-
+        
         // Begin Interior Elevator Panel
 
 
@@ -577,7 +713,7 @@ namespace WorldView
         // Begin Exterior Elevator Panel
 
         Display[] displays = new Display[4];
-        ButtonUI[] buttons = new ButtonUI[2];
+        ButtonUI[] buttons = new ButtonUI[2];        
 
         public void updateDisplay(int displayNum, int floorNum)
         {
@@ -679,14 +815,13 @@ namespace WorldView
                 states[i][1] = hardwareElevators[i].doorState;
                 states[i][2] = Convert.ToInt32(hardwareElevators[i].inService);
             }
-
             return states;
         }
 
         internal class Elevator
         {
 
-            Random rnd = new Random();
+            Random rnd = new Random();            
 
             private const int max_Capacity = 2000;
             private int current_Capacity;
@@ -808,7 +943,7 @@ namespace WorldView
                     DoorOpenRoutine();
                     ElevatorMove();
                 }
-            }
+            }            
 
             private void IsOccupied()
             {
@@ -821,7 +956,7 @@ namespace WorldView
                     Occupied = false;
                 }
             }
-
+            
             public async void DoorOpenRoutine()
             {
                 IsOccupied();
@@ -831,7 +966,6 @@ namespace WorldView
                     if (doorState == 2)
                     {
                         MainWindow.sysMessage(this.Name + ":Elevator Door is open");
-
                         if (currentCapacity > maxCapacity)
                         {
                             currentCapacity = rnd.Next(50, 600);
@@ -865,6 +999,12 @@ namespace WorldView
                     }
 
                 }
+                //send event to subscribed class...which is the MainWindow
+                MainWindow main = new MainWindow(); //subscribe to MainWindow
+                main.Status1 = main.Status1.Replace("Open", "Closed");
+                main.Status2 = main.Status2.Replace("Open", "Closed");
+                main.Status3 = main.Status3.Replace("Open", "Closed");
+                main.Status4 = main.Status4.Replace("Open", "Closed");
 
             }
 

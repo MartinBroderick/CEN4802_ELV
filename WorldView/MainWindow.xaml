@@ -68,33 +68,37 @@
                     <Button x:Name="tabOneOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="332,252,0,0" VerticalAlignment="Top" Width="75" Click="tabOneOpenDoor_Click"/>
                     <Button x:Name="tabOneCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="332,225,0,0" VerticalAlignment="Top" Width="75" Click="tabOneCloseDoor_Click"/>
                     <Button x:Name="tabOneCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="20,320,0,0" VerticalAlignment="Top" Width="134" Click="tabOneCallElevator_Click"/>
-                    <Label x:Name="tabEl1Status" Content="Elevator Data:&#xD;&#xA;Elevator Status: Inactive&#xD;&#xA;Number of Trips this session:&#xD;&#xA;Floors traveled:&#xD;&#xA;Floors Locked:&#xD;&#xA;Floors Closed:&#xD;&#xA;" HorizontalAlignment="Left" Margin="444,81,0,0" VerticalAlignment="Top" Height="122" Width="165"/>
+                    <Label x:Name="tabEl1Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Current Floor: 0&#xA;Door Status: Closed" HorizontalAlignment="Left" Margin="444,81,0,0" VerticalAlignment="Top" Height="78" Width="165"/>
                     <Label x:Name="label6" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="237,166,0,0" VerticalAlignment="Top" Width="158"/>
                     <ComboBox x:Name="el1CallSelect" HorizontalAlignment="Left" Margin="159,320,0,0" VerticalAlignment="Top" Width="41"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Elevator 2">
                 <Grid Background="#FFE5E5E5">
-                    <Image x:Name="elevatorimaget2" HorizontalAlignment="Left" Height="153" Margin="104,50,0,0" VerticalAlignment="Top" Width="77" Source="/images/floor1.png" Stretch="Fill"/>
-                    <Label x:Name="label7" Content="Elevator 2" HorizontalAlignment="Left" Margin="104,19,0,0" VerticalAlignment="Top" Width="77"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="104*"/>
+                        <ColumnDefinition Width="593*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="elevatorimaget2" HorizontalAlignment="Left" Height="153" Margin="0,50,0,0" VerticalAlignment="Top" Width="77" Source="/images/floor1.png" Stretch="Fill" Grid.Column="1"/>
+                    <Label x:Name="label7" Content="Elevator 2" HorizontalAlignment="Left" Margin="0,19,0,0" VerticalAlignment="Top" Width="77" Grid.Column="1"/>
                     <Image x:Name="el2statusflt5" HorizontalAlignment="Left" Height="26" Margin="71,52,0,0" VerticalAlignment="Top" Width="33" Source="/images/bad.png"/>
                     <Image x:Name="el2statusflt3" HorizontalAlignment="Left" Height="26" Margin="71,112,0,0" VerticalAlignment="Top" Width="33" Source="/images/bad.png"/>
                     <Image x:Name="el2statusflt2" HorizontalAlignment="Left" Height="26" Margin="71,146,0,0" VerticalAlignment="Top" Width="33" Source="/images/bad.png"/>
                     <Image x:Name="el2statusflt1" HorizontalAlignment="Left" Height="26" Margin="71,177,0,0" VerticalAlignment="Top" Width="33" Source="/images/bad.png" RenderTransformOrigin="0.455,3.385"/>
                     <Image x:Name="el2statusflt4" HorizontalAlignment="Left" Height="26" Margin="71,81,0,0" VerticalAlignment="Top" Width="33" Source="/images/bad.png"/>
-                    <Button x:Name="tabTwoEmergencyStop" Content="Emergency Stop" HorizontalAlignment="Left" Margin="47,279,0,0" VerticalAlignment="Top" Width="134" Click="tabTwoEmergencyStop_Click"/>
-                    <Button x:Name="tabTwoUnlockElevator" Content="Unlock Elevator" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top" Width="136" Click="tabTwoUnlockElevator_Click"/>
-                    <Button x:Name="tabTwoPush4" Content="4" HorizontalAlignment="Left" Margin="222,278,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush4_Click"/>
-                    <Button x:Name="tabTwoPush2" Content="2" HorizontalAlignment="Left" Margin="222,224,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush2_Click"/>
-                    <Button x:Name="tabTwoPush5" Content="5" HorizontalAlignment="Left" Margin="222,305,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush5_Click"/>
-                    <Button x:Name="tabTwoPush3" Content="3" HorizontalAlignment="Left" Margin="222,251,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush3_Click"/>
-                    <Button x:Name="tabTwoPush1" Content="1" HorizontalAlignment="Left" Margin="222,197,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush1_Click"/>
-                    <Button x:Name="tabTwoOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="332,252,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoOpenDoor_Click"/>
-                    <Button x:Name="tabTwoCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="332,225,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoCloseDoor_Click"/>
-                    <Button x:Name="tabTwoCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="10,324,0,0" VerticalAlignment="Top" Width="134" Click="tabTwoCallElevator_Click"/>
-                    <Label x:Name="tabEl2Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Number of Trips this session:&#xA;Floors traveled:&#xA;Floors Locked:&#xA;Floors Closed:&#xA;" HorizontalAlignment="Left" Margin="444,81,0,0" VerticalAlignment="Top" Height="122" Width="165"/>
-                    <Label x:Name="label9" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="237,166,0,0" VerticalAlignment="Top" Width="158"/>
-                    <ComboBox x:Name="el2CallSelect" HorizontalAlignment="Left" Margin="149,324,0,0" VerticalAlignment="Top" Width="41"/>
+                    <Button x:Name="tabTwoEmergencyStop" Content="Emergency Stop" HorizontalAlignment="Left" Margin="47,279,0,0" VerticalAlignment="Top" Width="134" Click="tabTwoEmergencyStop_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="tabTwoUnlockElevator" Content="Unlock Elevator" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top" Width="136" Click="tabTwoUnlockElevator_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="tabTwoPush4" Content="4" HorizontalAlignment="Left" Margin="118,278,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush4_Click" Grid.Column="1"/>
+                    <Button x:Name="tabTwoPush2" Content="2" HorizontalAlignment="Left" Margin="118,224,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush2_Click" Grid.Column="1"/>
+                    <Button x:Name="tabTwoPush5" Content="5" HorizontalAlignment="Left" Margin="118,305,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush5_Click" Grid.Column="1"/>
+                    <Button x:Name="tabTwoPush3" Content="3" HorizontalAlignment="Left" Margin="118,251,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush3_Click" Grid.Column="1"/>
+                    <Button x:Name="tabTwoPush1" Content="1" HorizontalAlignment="Left" Margin="118,197,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoPush1_Click" Grid.Column="1"/>
+                    <Button x:Name="tabTwoOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="228,252,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoOpenDoor_Click" Grid.Column="1"/>
+                    <Button x:Name="tabTwoCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="228,225,0,0" VerticalAlignment="Top" Width="75" Click="tabTwoCloseDoor_Click" Grid.Column="1"/>
+                    <Button x:Name="tabTwoCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="10,324,0,0" VerticalAlignment="Top" Width="134" Click="tabTwoCallElevator_Click" Grid.ColumnSpan="2"/>
+                    <Label x:Name="tabEl2Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Current Floor: 0&#xA;Door Status: Closed&#xA;" HorizontalAlignment="Left" Margin="340,81,0,0" VerticalAlignment="Top" Height="91" Width="165" Grid.Column="1"/>
+                    <Label x:Name="label9" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="133,166,0,0" VerticalAlignment="Top" Width="158" Grid.Column="1"/>
+                    <ComboBox x:Name="el2CallSelect" HorizontalAlignment="Left" Margin="45,324,0,0" VerticalAlignment="Top" Width="41" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Elevator 3" Margin="0,0,-4,-3">
@@ -120,7 +124,7 @@
                     <Button x:Name="tabThreeOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="166,252,0,0" VerticalAlignment="Top" Width="75" Click="tabThreeOpenDoor_Click" Grid.Column="1"/>
                     <Button x:Name="tabThreeCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="166,225,0,0" VerticalAlignment="Top" Width="75" Click="tabThreeCloseDoor_Click" Grid.Column="1"/>
                     <Button x:Name="tabThreeCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="10,322,0,0" VerticalAlignment="Top" Width="134" Click="tabThreeCallElevator_Click"/>
-                    <Label x:Name="tabEl3Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Number of Trips this session:&#xA;Floors traveled:&#xA;Floors Locked:&#xA;Floors Closed:&#xA;" HorizontalAlignment="Left" Margin="278,81,0,0" VerticalAlignment="Top" Height="122" Width="165" Grid.Column="1"/>
+                    <Label x:Name="tabEl3Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Current Floor: 0&#xA;Door Status: Closed&#xA;" HorizontalAlignment="Left" Margin="278,81,0,0" VerticalAlignment="Top" Height="81" Width="165" Grid.Column="1"/>
                     <Label x:Name="label12" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="71,166,0,0" VerticalAlignment="Top" Width="158" Grid.Column="1"/>
                     <ComboBox x:Name="el3CallSelect" HorizontalAlignment="Left" Margin="149,322,0,0" VerticalAlignment="Top" Width="41" Grid.ColumnSpan="2"/>
                 </Grid>
@@ -144,7 +148,7 @@
                     <Button x:Name="tabFourOpenDoor" Content="Open Door" HorizontalAlignment="Left" Margin="332,252,0,0" VerticalAlignment="Top" Width="75" Click="tabFourOpenDoor_Click"/>
                     <Button x:Name="tabFourCloseDoor" Content="Close Door" HorizontalAlignment="Left" Margin="332,225,0,0" VerticalAlignment="Top" Width="75" Click="tabFourCloseDoor_Click"/>
                     <Button x:Name="tabFourCallElevator" Content="Call Elevator To Floor" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top" Width="134" Click="tabFourCallElevator_Click" RenderTransformOrigin="0.269,1.909"/>
-                    <Label x:Name="tabEl1Status1" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Number of Trips this session:&#xA;Floors traveled:&#xA;Floors Locked:&#xA;Floors Closed:&#xA;" HorizontalAlignment="Left" Margin="444,81,0,0" VerticalAlignment="Top" Height="122" Width="165"/>
+                    <Label x:Name="tabEl4Status" Content="Elevator Data:&#xA;Elevator Status: Inactive&#xA;Current Floor: 0&#xA;Door Status: Closed&#xA;" HorizontalAlignment="Left" Margin="444,81,0,0" VerticalAlignment="Top" Height="91" Width="165"/>
                     <Label x:Name="label15" Content="Internal Elevator Buttons" HorizontalAlignment="Left" Margin="237,166,0,0" VerticalAlignment="Top" Width="158"/>
                     <ComboBox x:Name="el4CallSelect" HorizontalAlignment="Left" Margin="149,320,0,0" VerticalAlignment="Top" Width="41"/>
                 </Grid>
@@ -155,10 +159,10 @@
         <Label x:Name="label_Copy1" Content="Elevator 3" HorizontalAlignment="Left" Margin="35,203,0,0" VerticalAlignment="Top" Height="25" Width="64"/>
         <Label x:Name="label_Copy2" Content="Elevator 2" HorizontalAlignment="Left" Margin="35,128,0,0" VerticalAlignment="Top" Height="25" Width="64"/>
         <Label x:Name="label1" Content="Elevator Status" HorizontalAlignment="Left" Margin="66,12,0,0" VerticalAlignment="Top" Height="36" Width="139"/>
-        <Label x:Name="mainEl1Status" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,78,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
-        <Label x:Name="mainEl4Status1" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,307,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
-        <Label x:Name="mainEl3Status1" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,233,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
-        <Label x:Name="mainEl2Status" Content="Status: Off&#xD;&#xA;Elevator Locked: Yes" HorizontalAlignment="Left" Margin="45,155,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
+        <Label x:Name="mainEl1Status" Content="Status: Off&#xA;Current Floor: 0" HorizontalAlignment="Left" Margin="45,78,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
+        <Label x:Name="mainEl4Status" Content="Status: Off&#xA;Current Floor: 0" HorizontalAlignment="Left" Margin="45,307,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
+        <Label x:Name="mainEl3Status" Content="Status: Off&#xA;Current Floor: 0" HorizontalAlignment="Left" Margin="45,233,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
+        <Label x:Name="mainEl2Status" Content="Status: Off&#xA;Current Floor: 0" HorizontalAlignment="Left" Margin="45,155,0,0" VerticalAlignment="Top" Height="48" Width="194"/>
 
         <Grid Margin="35,428,825,26">
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="250" Margin="17,161,0,-55" Stroke="Black" VerticalAlignment="Top" Width="296"/>
